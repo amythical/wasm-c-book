@@ -187,7 +187,6 @@ Helper ->> sends a message to Worker
 Worker ->> executes function in wasm 
 Worker ->> sends the return value via a message to Helper
 Helper -->> returns the value from Worker to ReactJS using a Promise
-
 ```
 
 # Hello world 
@@ -949,5 +948,5 @@ myModule._freeVideoDataBuffer();
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MzA0MTMwNTJdfQ==
+eyJoaXN0b3J5IjpbNTkzODAyNDgyLC0xNjMwNDEzMDUyXX0=
 -->
