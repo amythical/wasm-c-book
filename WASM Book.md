@@ -925,7 +925,7 @@ trim.js: trim.c
 emcc -I/opt/ffmpeg/include -L/opt/ffmpeg/lib/ -lavcodec -lavformat -lavfilter -lavdevice -lswresample -lpostproc -lswscale -lavutil -lm $^ -o $@ -s WASM=1 -s ENVIRONMENT=web  -s MODULARIZE=1  -s MODULARIZE=1 -s WASM=1 -s USE_ES6_IMPORT_META=0 -s "EXPORTED_RUNTIME_METHODS='writeArrayToMemory','getValue'"  -s "EXPORT_NAME='createModule'" -s ALLOW_MEMORY_GROWTH  -s TOTAL_MEMORY=65536000
 ```
 For lager files we need the -s ALLOW_MEMORY_GROWTH option or we get a runtime memory error
-After updating to ffmpeg-7.0, got a *initial memory too small error
+After updating to ffmpeg-7.0, got a *initial memory too small* error, to fix this assign 1Gb (in multiples of 64KB i.e. 64*500*2*1024 as TOTAL_MEMORY)
 
 ## Read UINT Array (Returned from C) in JS
 ```
@@ -953,6 +953,6 @@ myModule._freeVideoDataBuffer();
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwMjIzNzg5OCwtMTQwNzc5NzEzNSw5ND
-kyMTExNTQsNTkzODAyNDgyLC0xNjMwNDEzMDUyXX0=
+eyJoaXN0b3J5IjpbLTE3MDg1ODk2OTYsLTE0MDc3OTcxMzUsOT
+Q5MjExMTU0LDU5MzgwMjQ4MiwtMTYzMDQxMzA1Ml19
 -->
