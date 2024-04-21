@@ -922,7 +922,7 @@ if (tAvOutputFormatContext && !(tAvOutputFormatContext->oformat->flags & AVFMT_N
 ```
 trim.js: trim.c
 
-emcc -I/opt/ffmpeg/include -L/opt/ffmpeg/lib/ -lavcodec -lavformat -lavfilter -lavdevice -lswresample -lpostproc -lswscale -lavutil -lm $^ -o $@ -s WASM=1 -s ENVIRONMENT=web  -s MODULARIZE=1  -s MODULARIZE=1 -s WASM=1 -s USE_ES6_IMPORT_META=0 -s "EXPORTED_RUNTIME_METHODS='writeArrayToMemory','getValue'"  -s "EXPORT_NAME='createModule'" -s 
+emcc -I/opt/ffmpeg/include -L/opt/ffmpeg/lib/ -lavcodec -lavformat -lavfilter -lavdevice -lswresample -lpostproc -lswscale -lavutil -lm $^ -o $@ -s WASM=1 -s ENVIRONMENT=web  -s MODULARIZE=1  -s MODULARIZE=1 -s WASM=1 -s USE_ES6_IMPORT_META=0 -s "EXPORTED_RUNTIME_METHODS='writeArrayToMemory','getValue'"  -s "EXPORT_NAME='createModule'" -s ALLOW_MEMORY_GROWTH
 ```
 ## Read UINT Array (Returned from C) in JS
 ```
@@ -950,6 +950,6 @@ myModule._freeVideoDataBuffer();
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4NTczMTM4MSw5NDkyMTExNTQsNTkzOD
-AyNDgyLC0xNjMwNDEzMDUyXX0=
+eyJoaXN0b3J5IjpbLTE2OTk0MzU2MDQsOTQ5MjExMTU0LDU5Mz
+gwMjQ4MiwtMTYzMDQxMzA1Ml19
 -->
