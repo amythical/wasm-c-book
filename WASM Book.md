@@ -907,9 +907,11 @@ NULL); //seek function
 	trimInfoPtr->bufferSize = buffer2Size;
 	trimInfoPtr->buffer = buffer2Ptr;
 
-	if (tAvOutputFormatContext && !(tAvOutputFormatContext->oformat->flags & AVFMT_NOFILE)){
+	/*
+// causes a crash as we havent allocated this using avio_io_open and instead used dyn_buf
+if (tAvOutputFormatContext && !(tAvOutputFormatContext->oformat->flags & AVFMT_NOFILE)){
 		avio_closep(&tAvOutputFormatContext->pb);
-	}
+	}*/
 
 	avformat_free_context(tAvOutputFormatContext);
 	return trimInfoPtr;
@@ -948,5 +950,6 @@ myModule._freeVideoDataBuffer();
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTkzODAyNDgyLC0xNjMwNDEzMDUyXX0=
+eyJoaXN0b3J5IjpbMTMxOTEyNDY5OSw1OTM4MDI0ODIsLTE2Mz
+A0MTMwNTJdfQ==
 -->
