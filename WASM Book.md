@@ -959,9 +959,11 @@ https://javascript.plainenglish.io/slimming-down-ffmpeg-for-a-web-app-compiling-
 https://zhuanlan.zhihu.com/p/74287959
 
 https://jeromewu.github.io/build-ffmpeg-webassembly-version-part-4-v0.2/
+
+https://javascript.plainenglish.io/slimming-down-ffmpeg-for-a-web-app-compiling-a-custom-version-20a06d36ece1
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTk3MDY3NjA3LC0zMTc4NjU2NSwyMDg5MD
-g0MTAzLC05OTQ4MTc3OTcsLTIxMDEwNDI3NDQsLTE3MDg1ODk2
-OTYsLTE0MDc3OTcxMzUsOTQ5MjExMTU0LDU5MzgwMjQ4MiwtMT
-YzMDQxMzA1Ml19
+eyJoaXN0b3J5IjpbLTEwNjI0NzIyMTMsLTMxNzg2NTY1LDIwOD
+kwODQxMDMsLTk5NDgxNzc5NywtMjEwMTA0Mjc0NCwtMTcwODU4
+OTY5NiwtMTQwNzc5NzEzNSw5NDkyMTExNTQsNTkzODAyNDgyLC
+0xNjMwNDEzMDUyXX0=
 -->
