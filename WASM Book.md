@@ -1,4 +1,4 @@
-<h1> ReactJS use WASM created with C & Emscripten</h1>
+# ReactJS use WASM created with C & Emscripten
 
 
 # Motivation
@@ -954,7 +954,7 @@ myModule._freeVideoDataBuffer();
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODg1NzMxNDEwLC0xNzA4NTg5Njk2LC0xND
-A3Nzk3MTM1LDk0OTIxMTE1NCw1OTM4MDI0ODIsLTE2MzA0MTMw
-NTJdfQ==
+eyJoaXN0b3J5IjpbLTIxMDEwNDI3NDQsLTE3MDg1ODk2OTYsLT
+E0MDc3OTcxMzUsOTQ5MjExMTU0LDU5MzgwMjQ4MiwtMTYzMDQx
+MzA1Ml19
 -->
