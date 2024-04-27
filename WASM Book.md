@@ -955,8 +955,11 @@ myModule._freeVideoDataBuffer();
 https://www-nxrte-com.translate.goog/jishu/44499.html?_x_tr_sl=zh-CN&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=sc
 
 https://javascript.plainenglish.io/slimming-down-ffmpeg-for-a-web-app-compiling-a-custom-version-20a06d36ece1
+
+https://zhuanlan.zhihu.com/p/74287959
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA4OTA4NDEwMywtOTk0ODE3Nzk3LC0yMT
-AxMDQyNzQ0LC0xNzA4NTg5Njk2LC0xNDA3Nzk3MTM1LDk0OTIx
-MTE1NCw1OTM4MDI0ODIsLTE2MzA0MTMwNTJdfQ==
+eyJoaXN0b3J5IjpbLTMxNzg2NTY1LDIwODkwODQxMDMsLTk5ND
+gxNzc5NywtMjEwMTA0Mjc0NCwtMTcwODU4OTY5NiwtMTQwNzc5
+NzEzNSw5NDkyMTExNTQsNTkzODAyNDgyLC0xNjMwNDEzMDUyXX
+0=
 -->
