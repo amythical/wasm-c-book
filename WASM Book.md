@@ -957,9 +957,11 @@ https://www-nxrte-com.translate.goog/jishu/44499.html?_x_tr_sl=zh-CN&_x_tr_tl=en
 https://javascript.plainenglish.io/slimming-down-ffmpeg-for-a-web-app-compiling-a-custom-version-20a06d36ece1
 
 https://zhuanlan.zhihu.com/p/74287959
+
+https://jeromewu.github.io/build-ffmpeg-webassembly-version-part-4-v0.2/
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMxNzg2NTY1LDIwODkwODQxMDMsLTk5ND
-gxNzc5NywtMjEwMTA0Mjc0NCwtMTcwODU4OTY5NiwtMTQwNzc5
-NzEzNSw5NDkyMTExNTQsNTkzODAyNDgyLC0xNjMwNDEzMDUyXX
-0=
+eyJoaXN0b3J5IjpbOTk3MDY3NjA3LC0zMTc4NjU2NSwyMDg5MD
+g0MTAzLC05OTQ4MTc3OTcsLTIxMDEwNDI3NDQsLTE3MDg1ODk2
+OTYsLTE0MDc3OTcxMzUsOTQ5MjExMTU0LDU5MzgwMjQ4MiwtMT
+YzMDQxMzA1Ml19
 -->
