@@ -969,7 +969,8 @@ Problems
 	fix  - add emcc option in Makefile for js/wasm `TOTAL_MEMORY=1000MB`
 2. cannot find libx264 
 	Recompile ffmpeg 
-	```
+
+```
 	FFMPEG_VERSION=7.0
 PREFIX=/opt/ffmpeg
 #CFLAGS="-s USE_PTHREADS=1 -O3 -I${PREFIX}/include:${PREFIX}/lib/pkgconfig:/Users/amythical/AD/mycode/wasm/llvm-project-llvmorg-17.0.0-rc2/build/lib/clang/17/include"
@@ -1021,8 +1022,12 @@ emmake make -j4
 echo "make done ... make install starting"
 emmake make install
 echo "all done ..."
+```
 
-**what was missing was   --enable-encoder=libx264,aac**
+**what was missing ? **
+```
+ --enable-encoder=libx264,aac 
+ ```
 
 Makefile 
 ``` $^ refers to source i.e trim.c and $@ refers to targer i.e. trim.js
@@ -1046,8 +1051,8 @@ clean:
         rm *.wasm
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDg2ODgzMTMsLTEwNjI0NzIyMTMsLT
-MxNzg2NTY1LDIwODkwODQxMDMsLTk5NDgxNzc5NywtMjEwMTA0
-Mjc0NCwtMTcwODU4OTY5NiwtMTQwNzc5NzEzNSw5NDkyMTExNT
-QsNTkzODAyNDgyLC0xNjMwNDEzMDUyXX0=
+eyJoaXN0b3J5IjpbLTgyMDkwMTc4MywtMTA2MjQ3MjIxMywtMz
+E3ODY1NjUsMjA4OTA4NDEwMywtOTk0ODE3Nzk3LC0yMTAxMDQy
+NzQ0LC0xNzA4NTg5Njk2LC0xNDA3Nzk3MTM1LDk0OTIxMTE1NC
+w1OTM4MDI0ODIsLTE2MzA0MTMwNTJdfQ==
 -->
