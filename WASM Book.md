@@ -961,9 +961,12 @@ https://zhuanlan.zhihu.com/p/74287959
 https://jeromewu.github.io/build-ffmpeg-webassembly-version-part-4-v0.2/
 
 https://javascript.plainenglish.io/slimming-down-ffmpeg-for-a-web-app-compiling-a-custom-version-20a06d36ece1
+
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjI0NzIyMTMsLTMxNzg2NTY1LDIwOD
-kwODQxMDMsLTk5NDgxNzc5NywtMjEwMTA0Mjc0NCwtMTcwODU4
-OTY5NiwtMTQwNzc5NzEzNSw5NDkyMTExNTQsNTkzODAyNDgyLC
-0xNjMwNDEzMDUyXX0=
+eyJoaXN0b3J5IjpbMTgzOTI3ODUxNywtMTA2MjQ3MjIxMywtMz
+E3ODY1NjUsMjA4OTA4NDEwMywtOTk0ODE3Nzk3LC0yMTAxMDQy
+NzQ0LC0xNzA4NTg5Njk2LC0xNDA3Nzk3MTM1LDk0OTIxMTE1NC
+w1OTM4MDI0ODIsLTE2MzA0MTMwNTJdfQ==
 -->
