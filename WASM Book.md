@@ -1066,11 +1066,11 @@ clean:
 
 ### Compile with SIMD!
 https://v8.dev/features/simd
-
+`./configure --enable-simd` so that it passes `-msse`, `-msse2`, `-mavx` or `-mfpu=neon` to the compiler and calls corresponding intrinsics. Then, additionally pass `-msimd128` to enable WebAssembly SIMD too either by using `CFLAGS=-msimd128 make …` / `CXXFLAGS="-msimd128 make …` or by modifying the build config directly when targeting Wasm.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk1NzMzMTMwOSwxNTY0ODkyOTYzLC00OD
-QwMzUxNDgsLTEwNjI0NzIyMTMsLTMxNzg2NTY1LDIwODkwODQx
-MDMsLTk5NDgxNzc5NywtMjEwMTA0Mjc0NCwtMTcwODU4OTY5Ni
-wtMTQwNzc5NzEzNSw5NDkyMTExNTQsNTkzODAyNDgyLC0xNjMw
-NDEzMDUyXX0=
+eyJoaXN0b3J5IjpbLTEwMjk3OTAwNTYsLTk1NzMzMTMwOSwxNT
+Y0ODkyOTYzLC00ODQwMzUxNDgsLTEwNjI0NzIyMTMsLTMxNzg2
+NTY1LDIwODkwODQxMDMsLTk5NDgxNzc5NywtMjEwMTA0Mjc0NC
+wtMTcwODU4OTY5NiwtMTQwNzc5NzEzNSw5NDkyMTExNTQsNTkz
+ODAyNDgyLC0xNjMwNDEzMDUyXX0=
 -->
