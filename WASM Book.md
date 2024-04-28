@@ -965,6 +965,7 @@ https://javascript.plainenglish.io/slimming-down-ffmpeg-for-a-web-app-compiling-
 
 Problems
 ------------
+## 
 ## Memory not enough 
 	fix  - add emcc option in Makefile for js/wasm `TOTAL_MEMORY=1000MB`
 ## Cannot find libx264 while encoding in browser
@@ -1058,8 +1059,9 @@ clean:
 https://v8.dev/features/simd
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2NDg5Mjk2MywtNDg0MDM1MTQ4LC0xMD
-YyNDcyMjEzLC0zMTc4NjU2NSwyMDg5MDg0MTAzLC05OTQ4MTc3
-OTcsLTIxMDEwNDI3NDQsLTE3MDg1ODk2OTYsLTE0MDc3OTcxMz
-UsOTQ5MjExMTU0LDU5MzgwMjQ4MiwtMTYzMDQxMzA1Ml19
+eyJoaXN0b3J5IjpbLTEzNTA5NDIzMjUsMTU2NDg5Mjk2MywtND
+g0MDM1MTQ4LC0xMDYyNDcyMjEzLC0zMTc4NjU2NSwyMDg5MDg0
+MTAzLC05OTQ4MTc3OTcsLTIxMDEwNDI3NDQsLTE3MDg1ODk2OT
+YsLTE0MDc3OTcxMzUsOTQ5MjExMTU0LDU5MzgwMjQ4MiwtMTYz
+MDQxMzA1Ml19
 -->
