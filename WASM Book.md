@@ -1076,6 +1076,7 @@ https://jeromewu.github.io/improving-performance-using-webassembly-simd-intrinsi
 
 
 # THREADING
+https://web.dev/articles/webassembly-threads
 Always wondered what ffmpeg.worker.js file is
 So here is how I made one
 
@@ -1115,10 +1116,10 @@ wo
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYyMDk2OTI1NywtMTU4Njc2MTUwMiwxMz
-gzNzQ2NTI2LC0xMDI5NzkwMDU2LC05NTczMzEzMDksMTU2NDg5
-Mjk2MywtNDg0MDM1MTQ4LC0xMDYyNDcyMjEzLC0zMTc4NjU2NS
-wyMDg5MDg0MTAzLC05OTQ4MTc3OTcsLTIxMDEwNDI3NDQsLTE3
-MDg1ODk2OTYsLTE0MDc3OTcxMzUsOTQ5MjExMTU0LDU5MzgwMj
-Q4MiwtMTYzMDQxMzA1Ml19
+eyJoaXN0b3J5IjpbLTE3NDIwNTI0ODIsLTYyMDk2OTI1NywtMT
+U4Njc2MTUwMiwxMzgzNzQ2NTI2LC0xMDI5NzkwMDU2LC05NTcz
+MzEzMDksMTU2NDg5Mjk2MywtNDg0MDM1MTQ4LC0xMDYyNDcyMj
+EzLC0zMTc4NjU2NSwyMDg5MDg0MTAzLC05OTQ4MTc3OTcsLTIx
+MDEwNDI3NDQsLTE3MDg1ODk2OTYsLTE0MDc3OTcxMzUsOTQ5Mj
+ExMTU0LDU5MzgwMjQ4MiwtMTYzMDQxMzA1Ml19
 -->
