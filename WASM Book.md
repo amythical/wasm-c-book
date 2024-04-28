@@ -969,7 +969,7 @@ Problems
 	fix  - add emcc option in Makefile for js/wasm `TOTAL_MEMORY=1000MB`
 2. cannot find libx264 
 	Recompile ffmpeg 
-	``
+	```
 	FFMPEG_VERSION=7.0
 PREFIX=/opt/ffmpeg
 #CFLAGS="-s USE_PTHREADS=1 -O3 -I${PREFIX}/include:${PREFIX}/lib/pkgconfig:/Users/amythical/AD/mycode/wasm/llvm-project-llvmorg-17.0.0-rc2/build/lib/clang/17/include"
@@ -1021,15 +1021,32 @@ emmake make -j4
 echo "make done ... make install starting"
 emmake make install
 echo "all done ..."
-``
-* what was missing was   --enable-encoder=libx264,aac 
 
-Make file 
-``
+**what was missing was   --enable-encoder=libx264,aac**
 
-``
+Makefile 
+``` $^ refers to source i.e trim.c and $@ refers to targer i.e. trim.js
+CC = emcc
+LIBS = -lavcodec -lavutil -lavformat -lx264
+INCLUDESPATH = -I/opt/ffmpeg/include
+LIBPATH = -L/opt/ffmpeg/lib
+LDFLAGS = -s "EXPORT_NAME='createModule'" -s TOTAL_MEMORY=100MB
+
+both.js: both.o
+        emcc  -I/opt/ffmpeg/include/ -L/opt/ffmpeg/lib/ -lavcodec -lavformat -lavutil both.c /opt/ffmpeg/lib/libx264.a -o both.js -s WASM=1 -s ENVIRONMENT=web  -s MODULARIZE=1  -s WASM=1 -msimd128 -s SIMD=1  -s USE_ES6_IMPORT_META=0 -s "EXPORTED_RUNTIME_METHODS='writeArrayToMemory','getValue'"  -s "EXPORT_NAME='createModule'" -s ALLOW_MEMORY_GROWTH -s LLD_REPORT_UNDEFINED -s TOTAL_MEMORY=1024MB -O3
+
+#       ${CC} $^ ${LIBPATH} -o $@ ${LIBS} ${LDFLAGS}
+
+both.o: both.c
+        ${CC} ${INCLUDESPATH} -c $^
+
+clean:
+        rm *.o
+        rm *.js
+        rm *.wasm
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MDM3MjM0ODcsLTEwNjI0NzIyMTMsLT
+eyJoaXN0b3J5IjpbLTE1NDg2ODgzMTMsLTEwNjI0NzIyMTMsLT
 MxNzg2NTY1LDIwODkwODQxMDMsLTk5NDgxNzc5NywtMjEwMTA0
 Mjc0NCwtMTcwODU4OTY5NiwtMTQwNzc5NzEzNSw5NDkyMTExNT
 QsNTkzODAyNDgyLC0xNjMwNDEzMDUyXX0=
