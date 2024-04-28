@@ -1068,14 +1068,16 @@ clean:
 https://v8.dev/features/simd
 `./configure --enable-simd` so that it passes `-msse`, `-msse2`, `-mavx` or `-mfpu=neon` to the compiler and calls corresponding intrinsics. Then, additionally pass `-msimd128` to enable WebAssembly SIMD too either by using `CFLAGS=-msimd128 make …` / `CXXFLAGS="-msimd128 make …` or by modifying the build config directly when targeting Wasm.
 
-```c
--fPIC -Wno-implicit-function-declaration -msse2 -msimd128 -experimental-wasm-simd
-
 ```
+pass -msmd128 flag to emcc
+```
+
+https://jeromewu.github.io/improving-performance-using-webassembly-simd-intrinsics/
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM4Mzc0NjUyNiwtMTAyOTc5MDA1NiwtOT
-U3MzMxMzA5LDE1NjQ4OTI5NjMsLTQ4NDAzNTE0OCwtMTA2MjQ3
-MjIxMywtMzE3ODY1NjUsMjA4OTA4NDEwMywtOTk0ODE3Nzk3LC
-0yMTAxMDQyNzQ0LC0xNzA4NTg5Njk2LC0xNDA3Nzk3MTM1LDk0
-OTIxMTE1NCw1OTM4MDI0ODIsLTE2MzA0MTMwNTJdfQ==
+eyJoaXN0b3J5IjpbLTE1ODY3NjE1MDIsMTM4Mzc0NjUyNiwtMT
+AyOTc5MDA1NiwtOTU3MzMxMzA5LDE1NjQ4OTI5NjMsLTQ4NDAz
+NTE0OCwtMTA2MjQ3MjIxMywtMzE3ODY1NjUsMjA4OTA4NDEwMy
+wtOTk0ODE3Nzk3LC0yMTAxMDQyNzQ0LC0xNzA4NTg5Njk2LC0x
+NDA3Nzk3MTM1LDk0OTIxMTE1NCw1OTM4MDI0ODIsLTE2MzA0MT
+MwNTJdfQ==
 -->
