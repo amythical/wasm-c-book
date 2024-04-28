@@ -963,10 +963,15 @@ https://jeromewu.github.io/build-ffmpeg-webassembly-version-part-4-v0.2/
 https://javascript.plainenglish.io/slimming-down-ffmpeg-for-a-web-app-compiling-a-custom-version-20a06d36ece1
 
 
-
+Problems
+------------
+1. Memory not enough 
+	fix  - add emcc option in Makefile for js/wasm `TOTAL_MEMORY=1000MB`
+2. cannot find libx264 
+	Recompile ffmpeg 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzOTI3ODUxNywtMTA2MjQ3MjIxMywtMz
-E3ODY1NjUsMjA4OTA4NDEwMywtOTk0ODE3Nzk3LC0yMTAxMDQy
-NzQ0LC0xNzA4NTg5Njk2LC0xNDA3Nzk3MTM1LDk0OTIxMTE1NC
-w1OTM4MDI0ODIsLTE2MzA0MTMwNTJdfQ==
+eyJoaXN0b3J5IjpbLTExNTU3MjkzMzMsLTEwNjI0NzIyMTMsLT
+MxNzg2NTY1LDIwODkwODQxMDMsLTk5NDgxNzc5NywtMjEwMTA0
+Mjc0NCwtMTcwODU4OTY5NiwtMTQwNzc5NzEzNSw5NDkyMTExNT
+QsNTkzODAyNDgyLC0xNjMwNDEzMDUyXX0=
 -->
