@@ -969,8 +969,67 @@ Problems
 	fix  - add emcc option in Makefile for js/wasm `TOTAL_MEMORY=1000MB`
 2. cannot find libx264 
 	Recompile ffmpeg 
+	``
+	FFMPEG_VERSION=7.0
+PREFIX=/opt/ffmpeg
+#CFLAGS="-s USE_PTHREADS=1 -O3 -I${PREFIX}/include:${PREFIX}/lib/pkgconfig:/Users/amythical/AD/mycode/wasm/llvm-project-llvmorg-17.0.0-rc2/build/lib/clang/17/include"
+CFLAGS="-s USE_PTHREADS=1 -O3 -I${PREFIX}/include"
+LDFLAGS="$CFLAGS -L${PREFIX}/lib -s INITIAL_MEMORY=33554432"
+MAKEFLAGS="-j4"
+cd ffmpeg-${FFMPEG_VERSION}
+  emconfigure ./configure \
+  --prefix=${PREFIX} \
+  --target-os=none \
+  --arch=x86_32 \
+  --enable-cross-compile \
+  --disable-debug \
+  --disable-x86asm \
+  --disable-inline-asm \
+  --disable-stripping \
+  --disable-programs \
+  --disable-doc \
+  --disable-all \
+  --enable-avcodec \
+  --enable-avformat \
+  --enable-avfilter \
+  --enable-avdevice \
+  --enable-avutil \
+  --enable-swresample \
+  --enable-postproc \
+  --enable-swscale \
+  --enable-filters \
+  --enable-protocol=file \
+  --enable-decoder=h264,aac,pcm_s16le \
+  --enable-demuxer=mov,matroska \
+  --enable-muxer=mp4 \
+  --enable-encoder=libx264,aac \
+  --enable-gpl \
+ --enable-libx264 \
+  --extra-cflags="$CFLAGS" \
+  --extra-cxxflags="$CFLAGS" \
+  --extra-ldflags="$LDFLAGS" \
+--nm="/Users/amythical/AD/mycode/wasm/emsdk/upstream/bin/llvm-nm -g" \
+  --ar=emar \
+  --as=llvm-as \
+  --ranlib=llvm-ranlib \
+  --cc=emcc \
+  --cxx=em++ \
+  --objcc=emcc \
+  --dep-cc=emcc
+echo "configure done ... make starting"
+emmake make -j4
+echo "make done ... make install starting"
+emmake make install
+echo "all done ..."
+``
+* what was missing was   --enable-encoder=libx264,aac 
+
+Make file 
+``
+
+``
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNTU3MjkzMzMsLTEwNjI0NzIyMTMsLT
+eyJoaXN0b3J5IjpbLTE0MDM3MjM0ODcsLTEwNjI0NzIyMTMsLT
 MxNzg2NTY1LDIwODkwODQxMDMsLTk5NDgxNzc5NywtMjEwMTA0
 Mjc0NCwtMTcwODU4OTY5NiwtMTQwNzc5NzEzNSw5NDkyMTExNT
 QsNTkzODAyNDgyLC0xNjMwNDEzMDUyXX0=
