@@ -965,14 +965,13 @@ https://javascript.plainenglish.io/slimming-down-ffmpeg-for-a-web-app-compiling-
 
 Problems
 ------------
-## ffmpeg error "frame_size (%d) was not respected for a non-last frame"
+## Frame_size was not respected for a non-last frame"
+FFmpeg error for audio transcoding, "frame_size (%d) was not respected for a non-last frame"
 Fix - check for samples read less than decoders frame size, do not send samples to encoder until this number is reached.
 Ideally add samples to a buffer and send them when they are equal to the encoders frame size.
 ```
  if(input_frame && input_frame->nb_samples < outputAudioCodecContext->frame_size){
-
-return -1;
-
+	return -1;
 }
 ```
 ## Memory not enough 
@@ -1068,7 +1067,7 @@ clean:
 https://v8.dev/features/simd
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0OTQ4Njk1MSwxNTY0ODkyOTYzLC00OD
+eyJoaXN0b3J5IjpbLTc2MDc3ODY2NSwxNTY0ODkyOTYzLC00OD
 QwMzUxNDgsLTEwNjI0NzIyMTMsLTMxNzg2NTY1LDIwODkwODQx
 MDMsLTk5NDgxNzc5NywtMjEwMTA0Mjc0NCwtMTcwODU4OTY5Ni
 wtMTQwNzc5NzEzNSw5NDkyMTExNTQsNTkzODAyNDgyLC0xNjMw
