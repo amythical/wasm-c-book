@@ -965,10 +965,11 @@ https://javascript.plainenglish.io/slimming-down-ffmpeg-for-a-web-app-compiling-
 
 Problems
 ------------
-1. Memory not enough 
+## Memory not enough 
 	fix  - add emcc option in Makefile for js/wasm `TOTAL_MEMORY=1000MB`
-2. cannot find libx264 
-	Recompile ffmpeg 
+## Cannot find libx264 while encoding in browser
+	
+Recompile ffmpeg 
 
 ```
 	FFMPEG_VERSION=7.0
@@ -1028,7 +1029,7 @@ echo "all done ..."
 ```
  --enable-encoder=libx264,aac 
  ```
-
+*Found this from [ffmpeg.js build](https://github.com/BrianJFeldman/ffmpeg.js.wasm/blob/master/Makefile#L289)
 Makefile 
 ``` $^ refers to source i.e trim.c and $@ refers to targer i.e. trim.js
 CC = emcc
@@ -1051,8 +1052,8 @@ clean:
         rm *.wasm
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgyMDkwMTc4MywtMTA2MjQ3MjIxMywtMz
-E3ODY1NjUsMjA4OTA4NDEwMywtOTk0ODE3Nzk3LC0yMTAxMDQy
-NzQ0LC0xNzA4NTg5Njk2LC0xNDA3Nzk3MTM1LDk0OTIxMTE1NC
-w1OTM4MDI0ODIsLTE2MzA0MTMwNTJdfQ==
+eyJoaXN0b3J5IjpbNjkwMjE4MjcyLC0xMDYyNDcyMjEzLC0zMT
+c4NjU2NSwyMDg5MDg0MTAzLC05OTQ4MTc3OTcsLTIxMDEwNDI3
+NDQsLTE3MDg1ODk2OTYsLTE0MDc3OTcxMzUsOTQ5MjExMTU0LD
+U5MzgwMjQ4MiwtMTYzMDQxMzA1Ml19
 -->
