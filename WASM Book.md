@@ -967,7 +967,7 @@ Problems
 ------------
 ## ffmpeg error "frame_size (%d) was not respected for a non-last frame"
 Fix - check for samples read less than decoders frame size, do not send samples to encoder until this number is reached.
-Ideally add samples to a buffer and send them when they are equal to t
+Ideally add samples to a buffer and send them when they are equal to the encoders frame size.
 ```
  if(input_frame && input_frame->nb_samples < outputAudioCodecContext->frame_size){
 
@@ -1068,9 +1068,9 @@ clean:
 https://v8.dev/features/simd
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDc1NzQ0NDMsMTU2NDg5Mjk2MywtND
-g0MDM1MTQ4LC0xMDYyNDcyMjEzLC0zMTc4NjU2NSwyMDg5MDg0
-MTAzLC05OTQ4MTc3OTcsLTIxMDEwNDI3NDQsLTE3MDg1ODk2OT
-YsLTE0MDc3OTcxMzUsOTQ5MjExMTU0LDU5MzgwMjQ4MiwtMTYz
-MDQxMzA1Ml19
+eyJoaXN0b3J5IjpbMTM0OTQ4Njk1MSwxNTY0ODkyOTYzLC00OD
+QwMzUxNDgsLTEwNjI0NzIyMTMsLTMxNzg2NTY1LDIwODkwODQx
+MDMsLTk5NDgxNzc5NywtMjEwMTA0Mjc0NCwtMTcwODU4OTY5Ni
+wtMTQwNzc5NzEzNSw5NDkyMTExNTQsNTkzODAyNDgyLC0xNjMw
+NDEzMDUyXX0=
 -->
