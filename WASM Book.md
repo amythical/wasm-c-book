@@ -1052,14 +1052,14 @@ clean:
         rm *.wasm
 ```
 
-## Not much of a speed difference
+## Not much of a speed difference using ffmpeg.wasm
 
 ### Compile with SIMD!
 https://v8.dev/features/simd
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ4NDAzNTE0OCwtMTA2MjQ3MjIxMywtMz
-E3ODY1NjUsMjA4OTA4NDEwMywtOTk0ODE3Nzk3LC0yMTAxMDQy
-NzQ0LC0xNzA4NTg5Njk2LC0xNDA3Nzk3MTM1LDk0OTIxMTE1NC
-w1OTM4MDI0ODIsLTE2MzA0MTMwNTJdfQ==
+eyJoaXN0b3J5IjpbMTU2NDg5Mjk2MywtNDg0MDM1MTQ4LC0xMD
+YyNDcyMjEzLC0zMTc4NjU2NSwyMDg5MDg0MTAzLC05OTQ4MTc3
+OTcsLTIxMDEwNDI3NDQsLTE3MDg1ODk2OTYsLTE0MDc3OTcxMz
+UsOTQ5MjExMTU0LDU5MzgwMjQ4MiwtMTYzMDQxMzA1Ml19
 -->
