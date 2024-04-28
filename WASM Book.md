@@ -1073,11 +1073,52 @@ pass -msmd128 flag to emcc
 ```
 
 https://jeromewu.github.io/improving-performance-using-webassembly-simd-intrinsics/
+
+
+# THREADING
+Always wondered what ffmpeg.worker.js file is
+So here is how I made one
+
+```
+#include <stdio.h>
+#include <unistd.h>
+#include <pthread.h>
+
+void *thread_callback(void *arg)
+{
+    sleep(1);
+    printf("Inside the thread: %d\n", *(int *)arg);
+    return NULL;
+}
+
+int main()
+{
+    puts("Before the thread");
+
+    pthread_t thread_id;
+    int arg = 42;
+    pthread_create(&thread_id, NULL, thread_callback, &arg);
+
+    pthread_join(thread_id, NULL);
+
+    puts("After the thread");
+
+    return 0;
+}
+```
+
+compile with
+emcc -pthread -s PROXY_TO_PTHREAD worker1.c -o worker1.js
+
+Produces
+wo
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1ODY3NjE1MDIsMTM4Mzc0NjUyNiwtMT
-AyOTc5MDA1NiwtOTU3MzMxMzA5LDE1NjQ4OTI5NjMsLTQ4NDAz
-NTE0OCwtMTA2MjQ3MjIxMywtMzE3ODY1NjUsMjA4OTA4NDEwMy
-wtOTk0ODE3Nzk3LC0yMTAxMDQyNzQ0LC0xNzA4NTg5Njk2LC0x
-NDA3Nzk3MTM1LDk0OTIxMTE1NCw1OTM4MDI0ODIsLTE2MzA0MT
-MwNTJdfQ==
+eyJoaXN0b3J5IjpbLTYyMDk2OTI1NywtMTU4Njc2MTUwMiwxMz
+gzNzQ2NTI2LC0xMDI5NzkwMDU2LC05NTczMzEzMDksMTU2NDg5
+Mjk2MywtNDg0MDM1MTQ4LC0xMDYyNDcyMjEzLC0zMTc4NjU2NS
+wyMDg5MDg0MTAzLC05OTQ4MTc3OTcsLTIxMDEwNDI3NDQsLTE3
+MDg1ODk2OTYsLTE0MDc3OTcxMzUsOTQ5MjExMTU0LDU5MzgwMj
+Q4MiwtMTYzMDQxMzA1Ml19
 -->
