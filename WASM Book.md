@@ -972,7 +972,7 @@ Problems
 Recompile ffmpeg 
 
 ```
-	FFMPEG_VERSION=7.0
+FFMPEG_VERSION=7.0
 PREFIX=/opt/ffmpeg
 #CFLAGS="-s USE_PTHREADS=1 -O3 -I${PREFIX}/include:${PREFIX}/lib/pkgconfig:/Users/amythical/AD/mycode/wasm/llvm-project-llvmorg-17.0.0-rc2/build/lib/clang/17/include"
 CFLAGS="-s USE_PTHREADS=1 -O3 -I${PREFIX}/include"
@@ -1051,9 +1051,15 @@ clean:
         rm *.js
         rm *.wasm
 ```
+
+## Not much of a speed difference
+
+### Compile with SIMD!
+https://v8.dev/features/simd
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjkwMjE4MjcyLC0xMDYyNDcyMjEzLC0zMT
-c4NjU2NSwyMDg5MDg0MTAzLC05OTQ4MTc3OTcsLTIxMDEwNDI3
-NDQsLTE3MDg1ODk2OTYsLTE0MDc3OTcxMzUsOTQ5MjExMTU0LD
-U5MzgwMjQ4MiwtMTYzMDQxMzA1Ml19
+eyJoaXN0b3J5IjpbLTQ4NDAzNTE0OCwtMTA2MjQ3MjIxMywtMz
+E3ODY1NjUsMjA4OTA4NDEwMywtOTk0ODE3Nzk3LC0yMTAxMDQy
+NzQ0LC0xNzA4NTg5Njk2LC0xNDA3Nzk3MTM1LDk0OTIxMTE1NC
+w1OTM4MDI0ODIsLTE2MzA0MTMwNTJdfQ==
 -->
