@@ -1081,75 +1081,42 @@ Always wondered what ffmpeg.worker.js file is
 So here is how I made one
 
 ```
-  
+// Pthread C File thread1.c
 
 #include  <emscripten.h>
-
 #include  <stdio.h>
-
 #include  <unistd.h>
-
 #include  <pthread.h>
 
-  
-  
-
 uint8_t *gbuffer1Ptr = NULL;
-
 int  gbuffer1Size = 0;
-
-  
-
 uint8_t *gbuffer2Ptr = NULL;
-
 int  gbuffer2Size = 0;
 
-  
-
 typedef  struct  trimInfo {
-
-int  bufferSize;
-
-uint8_t *buffer;
-
+	int  bufferSize;
+	uint8_t *buffer;
 } trimInfo;
 
-  
-
 uint8_t *EMSCRIPTEN_KEEPALIVE  createVideoDataBuffer(int  pBufferSize)
-
 {
-
-printf("In C createVideoDataBuffer ... allocating space\n");
-
-gbuffer1Size = pBufferSize;
-
-gbuffer1Ptr = malloc(pBufferSize * sizeof(uint8_t));
-
-return gbuffer1Ptr;
-
+	printf("In C createVideoDataBuffer ... allocating space\n");
+	gbuffer1Size = pBufferSize;
+	gbuffer1Ptr = malloc(pBufferSize * sizeof(uint8_t));
+	return gbuffer1Ptr;
 }
 
-  
-
 void EMSCRIPTEN_KEEPALIVE freeVideoDataBuffer()
-
 {
+	printf("In C destroyBufferImage ... freeing space\n");
 
-printf("In C destroyBufferImage ... freeing space\n");
+	if(gbuffer1Ptr)
 
-if(gbuffer1Ptr)
-
-free(gbuffer1Ptr);
-
-if(gbuffer2Ptr)
-
-free(gbuffer2Ptr);
-
-// free(fileinfo_ptr->format_name);
-
-// free(fileinfo_ptr);
-
+	free(gbuffer1Ptr);
+	if(gbuffer2Ptr)
+	free(gbuffer2Ptr);
+	// free(fileinfo_ptr->format_name);
+	// free(fileinfo_ptr);
 }
 
   
@@ -1204,6 +1171,14 @@ return  NULL;
 ```
 
 makefile
+```
+# $^ refers to source i.e trim.c and $@ refers to targer i.e. trim.js
+thread1.js: thread1.c
+        emcc -pthread  -I/opt/ffmpeg/include/ -L/opt/ffmpeg/lib/ -lavcodec -lavformat -lavutil thread1.c /opt/ffmpeg/lib/libx264.a -o thread1.js -s WASM=1 -s ENVIRONMENT=worker  -s MODULARIZE=1  -s PTHREAD_POOL_SIZE=1 -s USE_ES6_IMPORT_META=0 -s "EXPORTED_RUNTIME_METHODS='writeArrayToMemory','getValue'"  -s "EXPORT_NAME='createModule'"  -s LLD_REPORT_UNDEFINED -sALLOW_MEMORY_GROWTH -sWASM_MEM_MAX=1024MB -sASSERTIONS -O3
+        
+clean:
+        rm *.js
+        rm *.wasm
 ```
 
 Produces
@@ -1285,11 +1260,11 @@ else  if (typeof  define === 'function' && define['amd'])
 define([], () =>  createModule);
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNTE3OTMxMzksLTQ2OTUwMzk4MiwxND
-Y2NjY0MzUyLC0xNzQyMDUyNDgyLC02MjA5NjkyNTcsLTE1ODY3
-NjE1MDIsMTM4Mzc0NjUyNiwtMTAyOTc5MDA1NiwtOTU3MzMxMz
-A5LDE1NjQ4OTI5NjMsLTQ4NDAzNTE0OCwtMTA2MjQ3MjIxMywt
-MzE3ODY1NjUsMjA4OTA4NDEwMywtOTk0ODE3Nzk3LC0yMTAxMD
-QyNzQ0LC0xNzA4NTg5Njk2LC0xNDA3Nzk3MTM1LDk0OTIxMTE1
-NCw1OTM4MDI0ODJdfQ==
+eyJoaXN0b3J5IjpbLTI3Mjg5OTU2NCwtNDY5NTAzOTgyLDE0Nj
+Y2NjQzNTIsLTE3NDIwNTI0ODIsLTYyMDk2OTI1NywtMTU4Njc2
+MTUwMiwxMzgzNzQ2NTI2LC0xMDI5NzkwMDU2LC05NTczMzEzMD
+ksMTU2NDg5Mjk2MywtNDg0MDM1MTQ4LC0xMDYyNDcyMjEzLC0z
+MTc4NjU2NSwyMDg5MDg0MTAzLC05OTQ4MTc3OTcsLTIxMDEwND
+I3NDQsLTE3MDg1ODk2OTYsLTE0MDc3OTcxMzUsOTQ5MjExMTU0
+LDU5MzgwMjQ4Ml19
 -->
