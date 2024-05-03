@@ -1154,7 +1154,7 @@ thread1.js
 thread1.wasm
 thread1.worker.js
 
-Note: so PROXY_TO_PTHREAD needs a main method always
+Note: PROXY_TO_PTHREAD needs a main method always
 
 ## Deployment issues
 
@@ -1194,8 +1194,6 @@ worker.postMessage({"cmd":"load","handlers":handlers,"urlOrBlob":Module["mainScr
 
 working glue file
 ```
-  
-
 var  createModule = (() => {
 
 var  _scriptDir = typeof  document !== 'undefined' && document.currentScript ? document.currentScript.src : undefined;
@@ -1229,12 +1227,13 @@ else  if (typeof  define === 'function' && define['amd'])
 
 define([], () =>  createModule);
 ```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg1NDMwMjYyMywtNDY5NTAzOTgyLDE0Nj
-Y2NjQzNTIsLTE3NDIwNTI0ODIsLTYyMDk2OTI1NywtMTU4Njc2
-MTUwMiwxMzgzNzQ2NTI2LC0xMDI5NzkwMDU2LC05NTczMzEzMD
-ksMTU2NDg5Mjk2MywtNDg0MDM1MTQ4LC0xMDYyNDcyMjEzLC0z
-MTc4NjU2NSwyMDg5MDg0MTAzLC05OTQ4MTc3OTcsLTIxMDEwND
-I3NDQsLTE3MDg1ODk2OTYsLTE0MDc3OTcxMzUsOTQ5MjExMTU0
-LDU5MzgwMjQ4Ml19
+eyJoaXN0b3J5IjpbLTIxNDM0NTA4MzMsLTQ2OTUwMzk4MiwxND
+Y2NjY0MzUyLC0xNzQyMDUyNDgyLC02MjA5NjkyNTcsLTE1ODY3
+NjE1MDIsMTM4Mzc0NjUyNiwtMTAyOTc5MDA1NiwtOTU3MzMxMz
+A5LDE1NjQ4OTI5NjMsLTQ4NDAzNTE0OCwtMTA2MjQ3MjIxMywt
+MzE3ODY1NjUsMjA4OTA4NDEwMywtOTk0ODE3Nzk3LC0yMTAxMD
+QyNzQ0LC0xNzA4NTg5Njk2LC0xNDA3Nzk3MTM1LDk0OTIxMTE1
+NCw1OTM4MDI0ODJdfQ==
 -->
