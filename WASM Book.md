@@ -1116,15 +1116,26 @@ wo
 
 Note: so PROXY_TO_PTHREAD needs a main method always
 
+## Deployment issues
 
+### c
+
+
+### createObjectUrl error
+thread1.js
+worker.postMessage({"cmd":"load","handlers":handlers,"urlOrBlob":Module["mainScriptUrlOrBlob"]||_scrptDir
+
+replace with
+
+worker.postMessage({"cmd":"load","handlers":handlers,"urlOrBlob":Module["mainScriptUrlOrBlob"]||(self.location.origin + "/video/ccvideotoolkit/thread1.js")
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2NjY2NDM1MiwtMTc0MjA1MjQ4MiwtNj
-IwOTY5MjU3LC0xNTg2NzYxNTAyLDEzODM3NDY1MjYsLTEwMjk3
-OTAwNTYsLTk1NzMzMTMwOSwxNTY0ODkyOTYzLC00ODQwMzUxND
-gsLTEwNjI0NzIyMTMsLTMxNzg2NTY1LDIwODkwODQxMDMsLTk5
-NDgxNzc5NywtMjEwMTA0Mjc0NCwtMTcwODU4OTY5NiwtMTQwNz
-c5NzEzNSw5NDkyMTExNTQsNTkzODAyNDgyLC0xNjMwNDEzMDUy
-XX0=
+eyJoaXN0b3J5IjpbLTE1MjU2Njk5NTYsMTQ2NjY2NDM1MiwtMT
+c0MjA1MjQ4MiwtNjIwOTY5MjU3LC0xNTg2NzYxNTAyLDEzODM3
+NDY1MjYsLTEwMjk3OTAwNTYsLTk1NzMzMTMwOSwxNTY0ODkyOT
+YzLC00ODQwMzUxNDgsLTEwNjI0NzIyMTMsLTMxNzg2NTY1LDIw
+ODkwODQxMDMsLTk5NDgxNzc5NywtMjEwMTA0Mjc0NCwtMTcwOD
+U4OTY5NiwtMTQwNzc5NzEzNSw5NDkyMTExNTQsNTkzODAyNDgy
+LC0xNjMwNDEzMDUyXX0=
 -->
