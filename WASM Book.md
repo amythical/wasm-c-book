@@ -1188,7 +1188,7 @@ worker.postMessage({"cmd":"load","handlers":handlers,"urlOrBlob":Module["mainScr
 ```
 replace with
 ```
-worker.postMessage({"cmd":"load","handlers":handlers,"urlOrBlob":Module["mainScriptUrlOrBlob"]||(self.location.origin + "/video/ccvideotoolkit/thread1.js")
+worker.postMessage({"cmd":"load","handlers":handlers,"urlOrBlob":Module["mainScriptUrlOrBlob"]||(self.location.origin + "/threadxx/thread1.js")
 ```
 
 
@@ -1229,11 +1229,11 @@ define([], () =>  createModule);
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNDM0NTA4MzMsLTQ2OTUwMzk4MiwxND
-Y2NjY0MzUyLC0xNzQyMDUyNDgyLC02MjA5NjkyNTcsLTE1ODY3
-NjE1MDIsMTM4Mzc0NjUyNiwtMTAyOTc5MDA1NiwtOTU3MzMxMz
-A5LDE1NjQ4OTI5NjMsLTQ4NDAzNTE0OCwtMTA2MjQ3MjIxMywt
-MzE3ODY1NjUsMjA4OTA4NDEwMywtOTk0ODE3Nzk3LC0yMTAxMD
-QyNzQ0LC0xNzA4NTg5Njk2LC0xNDA3Nzk3MTM1LDk0OTIxMTE1
-NCw1OTM4MDI0ODJdfQ==
+eyJoaXN0b3J5IjpbLTIzMTAxMjE5MCwtMjE0MzQ1MDgzMywtND
+Y5NTAzOTgyLDE0NjY2NjQzNTIsLTE3NDIwNTI0ODIsLTYyMDk2
+OTI1NywtMTU4Njc2MTUwMiwxMzgzNzQ2NTI2LC0xMDI5NzkwMD
+U2LC05NTczMzEzMDksMTU2NDg5Mjk2MywtNDg0MDM1MTQ4LC0x
+MDYyNDcyMjEzLC0zMTc4NjU2NSwyMDg5MDg0MTAzLC05OTQ4MT
+c3OTcsLTIxMDEwNDI3NDQsLTE3MDg1ODk2OTYsLTE0MDc3OTcx
+MzUsOTQ5MjExMTU0XX0=
 -->
