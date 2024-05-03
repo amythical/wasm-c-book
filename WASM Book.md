@@ -1109,64 +1109,32 @@ uint8_t *EMSCRIPTEN_KEEPALIVE  createVideoDataBuffer(int  pBufferSize)
 void EMSCRIPTEN_KEEPALIVE freeVideoDataBuffer()
 {
 	printf("In C destroyBufferImage ... freeing space\n");
-
 	if(gbuffer1Ptr)
-
-	free(gbuffer1Ptr);
+		free(gbuffer1Ptr);
 	if(gbuffer2Ptr)
-	free(gbuffer2Ptr);
+		free(gbuffer2Ptr);
 	// free(fileinfo_ptr->format_name);
 	// free(fileinfo_ptr);
 }
 
-  
-  
-  
-
 void *thread_callback(void *arg)
-
 {
-
-printf("Inside the thread Sleeping 5 : %d\n", *(int *)arg);
-
-sleep(5);
-
-printf("Inside the thread woke up: %d\n", *(int *)arg);
-
-return  NULL;
-
+	printf("Inside the thread Sleeping 5 : %d\n", *(int *)arg);
+	sleep(5);
+	printf("Inside the thread woke up: %d\n", *(int *)arg);
+	return  NULL;
 }
 
-  
-  
-  
-
 trimInfo* EMSCRIPTEN_KEEPALIVE trimVideo()
-
 {
-
-printf("Before the thread\n");
-
-  
-
-pthread_t thread_id;
-
-int arg = 42;
-
-pthread_create(&thread_id, NULL, thread_callback, &arg);
-
-  
-
-pthread_join(thread_id, NULL);
-
-  
-
-puts("After the thread\n");
-
-  
-
-return  NULL;
-
+	printf("Before the thread\n");
+	pthread_t thread_id;
+	int arg = 42;
+	pthread_create(&thread_id, NULL, thread_callback, &arg);
+	
+	pthread_join(thread_id, NULL);
+	puts("After the thread\n");
+	return  NULL;
 }
 ```
 
@@ -1182,7 +1150,9 @@ clean:
 ```
 
 Produces
-wo
+thread1.js
+thread1.wasm
+thread1.worker.js
 
 Note: so PROXY_TO_PTHREAD needs a main method always
 
@@ -1260,7 +1230,7 @@ else  if (typeof  define === 'function' && define['amd'])
 define([], () =>  createModule);
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI3Mjg5OTU2NCwtNDY5NTAzOTgyLDE0Nj
+eyJoaXN0b3J5IjpbLTg1NDMwMjYyMywtNDY5NTAzOTgyLDE0Nj
 Y2NjQzNTIsLTE3NDIwNTI0ODIsLTYyMDk2OTI1NywtMTU4Njc2
 MTUwMiwxMzgzNzQ2NTI2LC0xMDI5NzkwMDU2LC05NTczMzEzMD
 ksMTU2NDg5Mjk2MywtNDg0MDM1MTQ4LC0xMDYyNDcyMjEzLC0z
