@@ -1118,9 +1118,13 @@ Note: so PROXY_TO_PTHREAD needs a main method always
 
 ## Deployment issues
 
-### c
-
-
+### embed corp error
+```
+// thread1.js change 
+wasmBinaryFile= to
+wasmBinaryFile="http://localhost:3002/threadxx/thread1.wasm"
+var pthreadMainJs=locateFile("http://localhost:3002/threadxx/thread1.worker.js")
+```
 ### createObjectUrl error
 thread1.js
 worker.postMessage({"cmd":"load","handlers":handlers,"urlOrBlob":Module["mainScriptUrlOrBlob"]||_scrptDir
@@ -1131,11 +1135,11 @@ worker.postMessage({"cmd":"load","handlers":handlers,"urlOrBlob":Module["mainScr
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MjU2Njk5NTYsMTQ2NjY2NDM1MiwtMT
-c0MjA1MjQ4MiwtNjIwOTY5MjU3LC0xNTg2NzYxNTAyLDEzODM3
-NDY1MjYsLTEwMjk3OTAwNTYsLTk1NzMzMTMwOSwxNTY0ODkyOT
-YzLC00ODQwMzUxNDgsLTEwNjI0NzIyMTMsLTMxNzg2NTY1LDIw
-ODkwODQxMDMsLTk5NDgxNzc5NywtMjEwMTA0Mjc0NCwtMTcwOD
-U4OTY5NiwtMTQwNzc5NzEzNSw5NDkyMTExNTQsNTkzODAyNDgy
-LC0xNjMwNDEzMDUyXX0=
+eyJoaXN0b3J5IjpbLTE4MzE4OTg1NywxNDY2NjY0MzUyLC0xNz
+QyMDUyNDgyLC02MjA5NjkyNTcsLTE1ODY3NjE1MDIsMTM4Mzc0
+NjUyNiwtMTAyOTc5MDA1NiwtOTU3MzMxMzA5LDE1NjQ4OTI5Nj
+MsLTQ4NDAzNTE0OCwtMTA2MjQ3MjIxMywtMzE3ODY1NjUsMjA4
+OTA4NDEwMywtOTk0ODE3Nzk3LC0yMTAxMDQyNzQ0LC0xNzA4NT
+g5Njk2LC0xNDA3Nzk3MTM1LDk0OTIxMTE1NCw1OTM4MDI0ODIs
+LTE2MzA0MTMwNTJdfQ==
 -->
