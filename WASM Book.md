@@ -967,7 +967,7 @@ Problems
 ------------
 ## Frame_size was not respected for a non-last frame"
 FFmpeg error for audio transcoding, "frame_size (%d) was not respected for a non-last frame"
-Fix - check for samples read less than decoders frame size, do not send samples to encoder until this number is reached.
+Fix - check if 'samples read' less than decoders 'frame size', do not send samples to encoder until this number is reached.
 Ideally add samples to a buffer and send them when they are equal to the encoders frame size.
 ```
 In audioEncoder()
@@ -1229,11 +1229,11 @@ define([], () =>  createModule);
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzMTAxMjE5MCwtMjE0MzQ1MDgzMywtND
-Y5NTAzOTgyLDE0NjY2NjQzNTIsLTE3NDIwNTI0ODIsLTYyMDk2
-OTI1NywtMTU4Njc2MTUwMiwxMzgzNzQ2NTI2LC0xMDI5NzkwMD
-U2LC05NTczMzEzMDksMTU2NDg5Mjk2MywtNDg0MDM1MTQ4LC0x
-MDYyNDcyMjEzLC0zMTc4NjU2NSwyMDg5MDg0MTAzLC05OTQ4MT
-c3OTcsLTIxMDEwNDI3NDQsLTE3MDg1ODk2OTYsLTE0MDc3OTcx
-MzUsOTQ5MjExMTU0XX0=
+eyJoaXN0b3J5IjpbLTc0MTUyMjk2NiwtMjMxMDEyMTkwLC0yMT
+QzNDUwODMzLC00Njk1MDM5ODIsMTQ2NjY2NDM1MiwtMTc0MjA1
+MjQ4MiwtNjIwOTY5MjU3LC0xNTg2NzYxNTAyLDEzODM3NDY1Mj
+YsLTEwMjk3OTAwNTYsLTk1NzMzMTMwOSwxNTY0ODkyOTYzLC00
+ODQwMzUxNDgsLTEwNjI0NzIyMTMsLTMxNzg2NTY1LDIwODkwOD
+QxMDMsLTk5NDgxNzc5NywtMjEwMTA0Mjc0NCwtMTcwODU4OTY5
+NiwtMTQwNzc5NzEzNV19
 -->
